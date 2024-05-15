@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115094206839",
+    "project_id": "fir-danki-7f8b5",
+    "storage_bucket": "fir-danki-7f8b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115094206839:android:6af5ca11e607a116ec0972",
+        "android_client_info": {
+          "package_name": "com.ericksdev.dankfire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFebB0lyfgwAK0fXgUNiulZqpwbiCNZ_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
