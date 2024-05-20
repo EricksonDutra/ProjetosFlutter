@@ -1,7 +1,31 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:teste/home_page.dart';
+import 'package:teste/pages/listatarefa_page.dart';
+import 'package:teste/projects/helpdesk/pages/login_page.dart';
+import 'package:teste/projects/helpdesk/pages/register_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+
+  FirebaseFirestore db = FirebaseFirestore.instance;
+
+  // db.collection("produtos").doc("001").set({"nome": "Caneta", "preco": "4.98", "ativo": true});
+  // db.collection("produtos").doc("001").set({"nome": "Cadeira", "preco": "24.60", "ativo": false});
+
+  // DocumentReference ref = await db.collection("produtos").add({"nome": "Cadeira", "preco": "24.60", "ativo": false});
+
+  // print('Id do registro: ${ref.id}');
+  // db.collection("produtos").doc("002").delete();
+  db.collection("produtos").snapshots().listen((snapshot) {
+    for (DocumentSnapshot<Map<String, dynamic>> item in snapshot.docs) {
+      Map<String, dynamic> dados = item.data()!;
+      print(dados.toString());
+    }
+  });
   runApp(const MyApp());
 }
 
@@ -16,7 +40,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const ListaTarefaPage(),
+      // initialRoute: 'login',
+      // routes: {
+      //   'login': (context) => const LoginPage(),
+      //   'register': (context) => const RegisterPage(),
+      //   'home': (context) => const HomePage(),
+      // },
     );
   }
 }
