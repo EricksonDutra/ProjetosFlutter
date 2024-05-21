@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:teste/home_page.dart';
-import 'package:teste/pages/listatarefa_page.dart';
 import 'package:teste/projects/helpdesk/pages/login_page.dart';
+import 'package:teste/projects/helpdesk/pages/order_page.dart';
 import 'package:teste/projects/helpdesk/pages/register_page.dart';
 
 void main() async {
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
         'login': (context) => const LoginPage(),
         'register': (context) => const RegisterPage(),
         'home': (context) => const HomePage(),
+        'order': (context) => const OrderPage(),
       },
     );
   }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:teste/projects/conversor_temperatura.dart';
-import 'package:teste/projects/racha_conta.dart';
 import 'package:teste/widgets/drawer_widget.dart';
 
 class HomePage extends StatelessWidget {
