@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'fir-danki-7f8b5.appspot.com',
     measurementId: 'G-XCNS7HV1YF',
   );
+
 }

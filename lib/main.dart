@@ -40,13 +40,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ListaTarefaPage(),
-      // initialRoute: 'login',
-      // routes: {
-      //   'login': (context) => const LoginPage(),
-      //   'register': (context) => const RegisterPage(),
-      //   'home': (context) => const HomePage(),
-      // },
+      // home: const ListaTarefaPage(),
+      initialRoute: 'home',
+      routes: {
+        'login': (context) => const LoginPage(),
+        'register': (context) => const RegisterPage(),
+        'home': (context) => const HomePage(),
+      },
     );
   }
 }
