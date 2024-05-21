@@ -93,6 +93,13 @@ Widget drawerWidget(context) {
             ),
           ),
         ),
+        ListTile(
+          title: const Text(
+            'Giphy',
+          ),
+          leading: const Icon(Icons.gif_box_outlined),
+          onTap: () => Navigator.pushNamed(context, 'giphy'),
+        ),
       ],
     ),
   );

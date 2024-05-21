@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:teste/home_page.dart';
+import 'package:teste/pages/gigpy_page.dart';
 import 'package:teste/projects/helpdesk/pages/login_page.dart';
 import 'package:teste/projects/helpdesk/pages/order_page.dart';
 import 'package:teste/projects/helpdesk/pages/register_page.dart';
@@ -12,6 +14,7 @@ void main() async {
   await Firebase.initializeApp();
 
   FirebaseFirestore db = FirebaseFirestore.instance;
+  await dotenv.load(fileName: ".env");
 
   // db.collection("produtos").doc("001").set({"nome": "Caneta", "preco": "4.98", "ativo": true});
   // db.collection("produtos").doc("001").set({"nome": "Cadeira", "preco": "24.60", "ativo": false});
@@ -47,6 +50,7 @@ class MyApp extends StatelessWidget {
         'register': (context) => const RegisterPage(),
         'home': (context) => const HomePage(),
         'order': (context) => const OrderPage(),
+        'giphy': (context) => const GiphyPage(),
       },
     );
   }
