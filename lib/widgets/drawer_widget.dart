@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teste/pages/manipula_tela.dart';
 import 'package:teste/projects/conversor_temperatura.dart';
-import 'package:teste/projects/helpdesk/initial_page.dart';
 import 'package:teste/projects/racha_conta.dart';
 import 'package:teste/projects/sqflite/lista_compras/screens/lista_compras.dart';
 
@@ -83,15 +82,17 @@ Widget drawerWidget(context) {
         ),
         ListTile(
           title: const Text(
+            'ListaTarefas',
+          ),
+          leading: const Icon(Icons.work_history_outlined),
+          onTap: () => Navigator.pushNamed(context, 'todo'),
+        ),
+        ListTile(
+          title: const Text(
             'HelpDesk',
           ),
           leading: const Icon(Icons.help_outline),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (bc) => const InitialPage(),
-            ),
-          ),
+          onTap: () => Navigator.pushNamed(context, 'helpdesk'),
         ),
         ListTile(
           title: const Text(

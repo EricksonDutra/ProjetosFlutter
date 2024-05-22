@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:teste/home_page.dart';
 import 'package:teste/pages/gigpy_page.dart';
+import 'package:teste/pages/listatarefa_page.dart';
+import 'package:teste/projects/helpdesk/initial_page.dart';
 import 'package:teste/projects/helpdesk/pages/login_page.dart';
 import 'package:teste/projects/helpdesk/pages/order_page.dart';
 import 'package:teste/projects/helpdesk/pages/register_page.dart';
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
         'home': (context) => const HomePage(),
         'order': (context) => const OrderPage(),
         'giphy': (context) => const GiphyPage(),
+        'todo': ((context) => const ListaTarefaPage()),
+        'helpdesk': ((context) => const InitialPage())
       },
     );
   }

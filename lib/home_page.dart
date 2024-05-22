@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:teste/widgets/drawer_widget.dart';
 
@@ -20,6 +21,10 @@ class HomePage extends StatelessWidget {
                 "Acesse as aplicações pelo menu lateral",
                 style: TextStyle(fontSize: 20),
               ),
+              Text(
+                'made by Erickson_Dutra',
+                style: GoogleFonts.roboto(textStyle: const TextStyle(fontStyle: FontStyle.italic)),
+              )
             ],
           ),
         ),

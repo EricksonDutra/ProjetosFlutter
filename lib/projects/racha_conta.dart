@@ -150,7 +150,7 @@ class _RachaContaState extends State<RachaConta> {
                     ),
                     onPressed: () {
                       if (_formkey.currentState!.validate()) {
-                        calculaConta;
+                        calculaConta();
                       }
                     },
                     child: const Text(
