@@ -9,6 +9,9 @@ import 'package:teste/projects/helpdesk/initial_page.dart';
 import 'package:teste/projects/helpdesk/pages/login_page.dart';
 import 'package:teste/projects/helpdesk/pages/order_page.dart';
 import 'package:teste/projects/helpdesk/pages/register_page.dart';
+import 'package:teste/projects/shop_coder/pages/home_shop.dart';
+import 'package:teste/projects/shop_coder/pages/product_detail.dart';
+import 'package:teste/projects/shop_coder/utils/constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,7 +49,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const ListaTarefaPage(),
-      initialRoute: 'home',
+      initialRoute: 'homeShop',
       routes: {
         'login': (context) => const LoginPage(),
         'register': (context) => const RegisterPage(),
@@ -54,7 +57,9 @@ class MyApp extends StatelessWidget {
         'order': (context) => const OrderPage(),
         'giphy': (context) => const GiphyPage(),
         'todo': ((context) => const ListaTarefaPage()),
-        'helpdesk': ((context) => const InitialPage())
+        'helpdesk': ((context) => const InitialPage()),
+        'homeShop': (context) => HomeShop(),
+        AppRoutes.PRODUCT_DETAIL: (context) => const ProductDetail(),
       },
     );
   }
