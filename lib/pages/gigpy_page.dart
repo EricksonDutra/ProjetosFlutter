@@ -26,7 +26,7 @@ class _GiphyPageState extends State<GiphyPage> {
 
   @override
   void initState() {
-    buscarGifs().then((value) => print(value));
+    buscarGifs().then((value) => debugPrint(value.toString()));
     super.initState();
   }
 

@@ -22,10 +22,10 @@ class _LoginPageState extends State<LoginPage> {
         .then((firebaseUser) {
       const SnackBar snackBar = SnackBar(content: Text('Login efetuado com sucesso!'), duration: Duration(seconds: 5));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      print('tudo certo..');
+      debugPrint('tudo certo..');
       Navigator.pushNamed(context, 'home');
     }).catchError((err) {
-      print(err);
+      debugPrint(err);
       showDialog(
           context: context,
           builder: ((context) {

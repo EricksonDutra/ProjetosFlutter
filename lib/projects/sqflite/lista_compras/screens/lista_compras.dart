@@ -72,7 +72,7 @@ class _ListaComprasState extends State<ListaCompras> {
 
     int res = await db.cadastrarProduto(obj);
 
-    print('cadastro realizado ${res.toString()}');
+    debugPrint('cadastro realizado ${res.toString()}');
   }
 
   addProduct(context) {

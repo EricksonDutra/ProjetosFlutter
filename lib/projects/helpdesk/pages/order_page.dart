@@ -50,7 +50,7 @@ class _OrderPageState extends State<OrderPage> {
               child: IconButton(
                 icon: const Icon(Icons.phone_callback_rounded),
                 onPressed: () {
-                  print('clicou');
+                  debugPrint('clicou');
                   exibirModal(context);
                 },
                 color: Colors.white,

@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }).catchError((err) {
-      print(err);
+      debugPrint(err);
     });
   }
 
